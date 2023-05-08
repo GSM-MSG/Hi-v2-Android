@@ -9,6 +9,7 @@ class Dependency {
     object AndroidX {
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
         const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}"
+        const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
     }
 
     object Compose {
@@ -26,5 +27,9 @@ class Dependency {
         const val ESPRESSO = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO}"
         const val COMPOSE_JUNIT = "androidx.compose.ui:ui-test-junit4:${Versions.COMPOSE}"
         const val COMPOSE_MANIFEST = "androidx.compose.ui:ui-test-manifest:${Versions.COMPOSE}"
+    }
+
+    object Google {
+        const val MATERIAL = "com.google.android.material:material:${Versions.GOOGLE_MATERIAL}"
     }
 }
