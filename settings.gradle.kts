@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Hi-v2"
-include ':app'
+include(":app")
