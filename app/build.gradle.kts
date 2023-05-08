@@ -49,6 +49,10 @@ android {
 }
 
 dependencies {
+    implementation(project(":presentation"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
+
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE)
     implementation(Dependency.Compose.ACTIVITY_COMPOSE)
