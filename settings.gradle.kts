@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Hi-v2"
 include(":app")
+include(":data")
+include(":domain")
+include(":presentation")
