@@ -1,4 +1,4 @@
-package team.msg.hi_v2
+package team.msg.hi_v2.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
