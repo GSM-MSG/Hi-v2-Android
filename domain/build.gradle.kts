@@ -1,6 +1,7 @@
 plugins {
     id(ProjectProperties.Gradle.LIBRARY)
     id(ProjectProperties.Gradle.KOTLIN)
+    kotlin(ProjectProperties.Gradle.KAPT)
 }
 
 android {
@@ -29,5 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = ProjectProperties.Versions.JVM_TARGET
     }
+}
+
+dependencies {
+    implementation(Dependency.Google.HILT)
+    kapt(Dependency.Google.HILT_COMPILER)
 }
 

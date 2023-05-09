@@ -17,5 +17,6 @@ object Versions {
     const val ANDROID_JUNIT = "1.1.5"
     const val ESPRESSO = "3.5.1"
 
-    const val GOOGLE_MATERIAL = "1.5.0"
+    const val GOOGLE_MATERIAL = "1.8.0"
+    const val HILT = "2.44"
 }

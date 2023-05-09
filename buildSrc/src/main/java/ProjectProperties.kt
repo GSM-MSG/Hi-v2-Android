@@ -6,6 +6,8 @@ object ProjectProperties {
         const val LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
         const val KTLINT = "org.jlleitschuh.gradle.ktlint"
+        const val KAPT = "kapt"
+        const val HILT = "com.google.dagger.hilt.android"
     }
     object Test {
         const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"

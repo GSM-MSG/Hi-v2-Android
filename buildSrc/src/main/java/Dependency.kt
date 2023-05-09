@@ -24,5 +24,7 @@ class Dependency {
 
     object Google {
         const val MATERIAL = "com.google.android.material:material:${Versions.GOOGLE_MATERIAL}"
+        const val HILT = "com.google.dagger:hilt-android:${Versions.HILT}"
+        const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 }
