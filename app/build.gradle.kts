@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id(ProjectProperties.Gradle.APPLICATION)
     id(ProjectProperties.Gradle.KOTLIN)
@@ -20,6 +22,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "BASE_URL",  getApiKey("BASE_URL"))
     }
 
     buildTypes {
@@ -69,3 +72,5 @@ dependencies {
     implementation(Dependency.Libraries.OKHTTP)
     implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
 }
+
+fun getApiKey(propertyKey: String) = gradleLocalProperties(rootDir).getProperty(propertyKey)
