@@ -4,17 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "team.msg.hi_v2"
-    compileSdk = Versions.compileSdk
+    namespace = ProjectProperties.NameSpace.APP
+    compileSdk = ProjectProperties.Versions.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "team.msg.hi_v2"
-        minSdk = Versions.minSdk
-        targetSdk = Versions.targetSdk
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ProjectProperties.Id.APPLICATION_ID
+        minSdk = ProjectProperties.Versions.MIN_SDK
+        targetSdk = ProjectProperties.Versions.TARGET_SDK
+        versionCode = ProjectProperties.Versions.VERSION_CODE
+        versionName = ProjectProperties.Versions.VERSION_NAME
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = ProjectProperties.Test.TEST_RUNNER
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -24,26 +24,26 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile(ProjectProperties.Files.DEFAULT_PROGUARDFILES), ProjectProperties.Files.PROGUARDFILES
             )
         }
     }
     compileOptions {
-        sourceCompatibility = Versions.JAVA_VERSION
-        targetCompatibility = Versions.JAVA_VERSION
+        sourceCompatibility = ProjectProperties.Versions.JAVA_VERSION
+        targetCompatibility = ProjectProperties.Versions.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = ProjectProperties.Versions.JVM_TARGET
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
     }
     packagingOptions {
         resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += ProjectProperties.Action.EXCLUDES
         }
     }
 }

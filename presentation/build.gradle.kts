@@ -4,30 +4,31 @@ plugins {
 }
 
 android {
-    namespace = "team.msg.presentation"
-    compileSdk = Versions.compileSdk
+    namespace = ProjectProperties.NameSpace.PRESENTATION
+    compileSdk = ProjectProperties.Versions.COMPILE_SDK
 
     defaultConfig {
-        minSdk = Versions.minSdk
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        minSdk = ProjectProperties.Versions.MIN_SDK
+        testInstrumentationRunner = ProjectProperties.Test.TEST_RUNNER
+        consumerProguardFiles(ProjectProperties.Files.CONSUMER_PROGUARDFILES)
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile(ProjectProperties.Files.DEFAULT_PROGUARDFILES),
+                ProjectProperties.Files.PROGUARDFILES
             )
         }
     }
     compileOptions {
-        sourceCompatibility = Versions.JAVA_VERSION
-        targetCompatibility = Versions.JAVA_VERSION
+        sourceCompatibility = ProjectProperties.Versions.JAVA_VERSION
+        targetCompatibility = ProjectProperties.Versions.JAVA_VERSION
     }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = ProjectProperties.Versions.JVM_TARGET
     }
 }
 

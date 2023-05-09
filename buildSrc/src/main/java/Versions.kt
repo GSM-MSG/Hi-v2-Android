@@ -5,12 +5,6 @@ object Versions {
     const val KOTLIN = "1.8.10"
     const val KTLINT = "11.3.2"
 
-    const val compileSdk = 33
-    const val minSdk = 24
-    const val targetSdk = 33
-
-    val JAVA_VERSION = JavaVersion.VERSION_1_8
-
     const val COMPOSE = "1.4.3"
     const val ACTIVITY_COMPOSE = "1.5.1"
     const val MATERIAL3_COMPOSE = "1.0.1"
