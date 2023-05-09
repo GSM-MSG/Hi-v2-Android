@@ -34,9 +34,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Create LOCAL_PROPERTIES
-        env:
-          LOCAL_PROPERTIES: ${{ secrets.LOCAL_PROPERTIES }}
-        run: echo "${LOCAL_PROPERTIES}" > ./local.properties
+        run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
       - name: Run ktlint
         run: ./gradlew ktlintCheck
