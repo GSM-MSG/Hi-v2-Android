@@ -19,4 +19,7 @@ object Versions {
 
     const val GOOGLE_MATERIAL = "1.8.0"
     const val HILT = "2.44"
+
+    const val RETROFIT = "2.9.0"
+    const val OKHTTP = "4.10.0"
 }
