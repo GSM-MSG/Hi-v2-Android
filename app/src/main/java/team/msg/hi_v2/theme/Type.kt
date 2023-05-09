@@ -1,4 +1,4 @@
-package team.msg.hi_v2.ui.theme
+package team.msg.hi_v2.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

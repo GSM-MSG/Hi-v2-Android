@@ -1,4 +1,4 @@
-package team.msg.hi_v2.ui.theme
+package team.msg.hi_v2.theme
 
 import android.app.Activity
 import android.os.Build
