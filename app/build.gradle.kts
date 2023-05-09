@@ -23,7 +23,12 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        buildConfigField("String", "BASE_URL",  getApiKey("BASE_URL"))
+
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            getApiKey("BASE_URL")
+        )
     }
 
     buildTypes {
