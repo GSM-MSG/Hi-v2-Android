@@ -31,8 +31,3 @@ android {
     }
 }
 
-dependencies {
-    testImplementation(Dependency.Test.JUNIT)
-    androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
-    androidTestImplementation(Dependency.Test.ESPRESSO)
-}
