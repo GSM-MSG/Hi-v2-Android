@@ -1,8 +1,8 @@
 import org.gradle.api.JavaVersion
 
 object Versions {
-    const val GRADLE = "8.0.2"
-    const val KOTLIN = "1.8.10"
+    const val GRADLE = "7.4.2"
+    const val KOTLIN = "1.7.0"
     const val KTLINT = "11.3.2"
 
     const val COMPOSE = "1.4.3"
