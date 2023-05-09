@@ -36,5 +36,8 @@ jobs:
     - name: Run ktlint
       run: ./gradlew ktlintCheck
 
+    - name: Create LOCAL_PROPERTIES
+        run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
+
     - name: Build with Gradle
       run: ./gradlew build
