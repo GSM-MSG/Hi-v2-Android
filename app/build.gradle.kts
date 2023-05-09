@@ -83,5 +83,5 @@ fun getApiKey(propertyKey: String): String {
     val propFile = rootProject.file("./local.properties")
     val properties = Properties()
     properties.load(FileInputStream(propFile))
-    return properties.getProperty(propertyKey) ?: "https://"
+    return properties.getProperty(propertyKey)
 }
