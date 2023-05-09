@@ -27,10 +27,10 @@ object ProjectProperties {
         const val COMPILE_SDK = 33
         const val MIN_SDK = 24
         const val TARGET_SDK = 33
-        const val JVM_TARGET = "17"
+        const val JVM_TARGET = "11"
         const val VERSION_CODE = 1
         const val VERSION_NAME = "1.0"
-        val JAVA_VERSION = JavaVersion.VERSION_17
+        val JAVA_VERSION = JavaVersion.VERSION_11
     }
 
     object NameSpace {
