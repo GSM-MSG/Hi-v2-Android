@@ -60,10 +60,4 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_PREVIEW)
     implementation(Dependency.Compose.COMPOSE_MATERIAL)
     implementation(Dependency.Compose.COMPOSE_MATERIAL3)
-    testImplementation(Dependency.Test.JUNIT)
-    androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
-    androidTestImplementation(Dependency.Test.ESPRESSO)
-    androidTestImplementation(Dependency.Test.COMPOSE_JUNIT)
-    debugImplementation(Dependency.Compose.COMPOSE_TOOLING)
-    debugImplementation(Dependency.Test.COMPOSE_MANIFEST)
 }
