@@ -1,11 +1,4 @@
 class Dependency {
-    object Gradle {
-        const val APPLICATION = "com.android.application"
-        const val LIBRARY = "com.android.library"
-        const val KOTLIN = "org.jetbrains.kotlin.android"
-        const val KTLINT = "org.jlleitschuh.gradle.ktlint"
-    }
-
     object AndroidX {
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
         const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE}"

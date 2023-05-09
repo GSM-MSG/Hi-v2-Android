@@ -1,6 +1,6 @@
 plugins {
-    id(Dependency.Gradle.LIBRARY)
-    id(Dependency.Gradle.KOTLIN)
+    id(ProjectProperties.Gradle.LIBRARY)
+    id(ProjectProperties.Gradle.KOTLIN)
 }
 
 android {

@@ -1,6 +1,12 @@
 import org.gradle.api.JavaVersion
 
 object ProjectProperties {
+    object Gradle {
+        const val APPLICATION = "com.android.application"
+        const val LIBRARY = "com.android.library"
+        const val KOTLIN = "org.jetbrains.kotlin.android"
+        const val KTLINT = "org.jlleitschuh.gradle.ktlint"
+    }
     object Test {
         const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
     }
