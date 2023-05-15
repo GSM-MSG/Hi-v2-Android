@@ -80,7 +80,7 @@ dependencies {
 }
 
 fun getApiKey(propertyKey: String): String {
-    val propFile = rootProject.file("local.properties")
+    val propFile = rootProject.file("./local.properties")
     val properties = Properties()
     propFile.reader().use { reader ->
         properties.load(reader)
