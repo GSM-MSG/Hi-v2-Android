@@ -83,5 +83,8 @@ fun getApiKey(propertyKey: String): String {
     val propFile = rootProject.file("./local.properties")
     val properties = Properties()
     properties.load(FileInputStream(propFile))
-    return properties.getProperty(propertyKey)
+
+    val value = properties.getProperty(propertyKey)
+    requireNotNull(value) { "Property key '$propertyKey' not found in local.properties" }
+    return value
 }
