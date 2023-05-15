@@ -34,7 +34,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Create LOCAL_PROPERTIES
-        run: echo ${{ secrets.LOCAL_PROPERTIES.replace('"', '\\"') }} > ./local.properties
+        run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
       - name: Run ktlint
         run: ./gradlew ktlintCheck
