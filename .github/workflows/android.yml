@@ -35,7 +35,7 @@ jobs:
 
       - name: Create LOCAL_PROPERTIES
         run: |
-          echo -e '${{ secrets.BASE_URL }}' > ./local.properties
+          echo -e '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
       - name: Run ktlint
         run: ./gradlew ktlintCheck
