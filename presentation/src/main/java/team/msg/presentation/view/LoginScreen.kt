@@ -26,7 +26,6 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
-
     ) {
         Spacer(modifier.height(28.dp))
         Image(
