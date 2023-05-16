@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = ProjectProperties.Versions.JVM_TARGET
     }
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
@@ -49,4 +53,5 @@ dependencies {
     androidTestImplementation(Dependency.Test.ESPRESSO)
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
+    implementation(Dependency.MSG.GAUTH)
 }

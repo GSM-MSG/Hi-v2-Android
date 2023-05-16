@@ -36,4 +36,8 @@ class Dependency {
         const val OKHTTP_LOGGING_INTERCEPTOR =
             "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
     }
+
+    object MSG {
+        const val GAUTH = "com.github.GSM-MSG:GAuth-Signin-Android:${Versions.GAUTH}"
+    }
 }
