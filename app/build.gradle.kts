@@ -86,6 +86,8 @@ fun getApiKey(propertyKey: String): String {
         properties.load(reader)
     }
 
+    println(properties)
+
     val value = properties.getProperty(propertyKey)
     requireNotNull(value) { "Property key '$propertyKey' not found in local.properties" }
 
