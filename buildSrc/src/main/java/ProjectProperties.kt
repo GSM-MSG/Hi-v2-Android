@@ -6,6 +6,8 @@ object ProjectProperties {
         const val LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
         const val KTLINT = "org.jlleitschuh.gradle.ktlint"
+        const val KAPT = "kapt"
+        const val HILT = "com.google.dagger.hilt.android"
     }
     object Test {
         const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
@@ -25,10 +27,10 @@ object ProjectProperties {
         const val COMPILE_SDK = 33
         const val MIN_SDK = 24
         const val TARGET_SDK = 33
-        const val JVM_TARGET = "1.8"
+        const val JVM_TARGET = "11"
         const val VERSION_CODE = 1
         const val VERSION_NAME = "1.0"
-        val JAVA_VERSION = JavaVersion.VERSION_1_8
+        val JAVA_VERSION = JavaVersion.VERSION_11
     }
 
     object NameSpace {

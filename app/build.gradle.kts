@@ -1,6 +1,11 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id(ProjectProperties.Gradle.APPLICATION)
     id(ProjectProperties.Gradle.KOTLIN)
+    id(ProjectProperties.Gradle.HILT)
+    kotlin(ProjectProperties.Gradle.KAPT)
 }
 
 android {
@@ -18,6 +23,12 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            getApiKey("BASE_URL")
+        )
     }
 
     buildTypes {
@@ -60,4 +71,17 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_PREVIEW)
     implementation(Dependency.Compose.COMPOSE_MATERIAL)
     implementation(Dependency.Compose.COMPOSE_MATERIAL3)
+    implementation(Dependency.Google.HILT)
+    kapt(Dependency.Google.HILT_COMPILER)
+    implementation(Dependency.Libraries.RETROFIT)
+    implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
+    implementation(Dependency.Libraries.OKHTTP)
+    implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
+}
+
+fun getApiKey(propertyKey: String): String {
+    val propFile = rootProject.file("./local.properties")
+    val properties = Properties()
+    properties.load(FileInputStream(propFile))
+    return properties.getProperty(propertyKey)
 }
