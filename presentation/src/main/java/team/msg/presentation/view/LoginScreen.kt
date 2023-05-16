@@ -55,8 +55,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         Column(
             modifier = modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
-        )
-        {
+        ) {
             GAuthButton(
                 style = Types.Style.DEFAULT,
                 actionType = Types.ActionType.SIGNIN,
