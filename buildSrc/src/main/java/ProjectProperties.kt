@@ -38,6 +38,7 @@ object ProjectProperties {
         const val DOMAIN = "team.msg.domain"
         const val DATA = "team.msg.data"
         const val APP = "team.msg.hi_v2"
+        const val DESIGN_SYSTEM = "team.msg.design_system"
     }
 
     object Action {
