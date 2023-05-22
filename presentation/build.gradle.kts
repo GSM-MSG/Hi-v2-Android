@@ -54,4 +54,5 @@ dependencies {
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
     implementation(Dependency.MSG.GAUTH)
+    implementation(Dependency.Libraries.SERIALIZATION)
 }
