@@ -8,6 +8,7 @@ object ProjectProperties {
         const val KTLINT = "org.jlleitschuh.gradle.ktlint"
         const val KAPT = "kapt"
         const val HILT = "com.google.dagger.hilt.android"
+        const val SERIALIZATION = "plugin.serialization"
     }
     object Test {
         const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
