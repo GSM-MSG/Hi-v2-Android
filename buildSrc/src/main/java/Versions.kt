@@ -5,7 +5,7 @@ object Versions {
     const val KOTLIN = "1.8.10"
     const val KTLINT = "11.3.2"
 
-    const val COMPOSE = "1.3.3"
+    const val COMPOSE = "1.3.1"
     const val ACTIVITY_COMPOSE = "1.5.1"
     const val MATERIAL3_COMPOSE = "1.0.1"
 
