@@ -2,10 +2,10 @@ import org.gradle.api.JavaVersion
 
 object Versions {
     const val GRADLE = "7.4.2"
-    const val KOTLIN = "1.7.0"
+    const val KOTLIN = "1.8.10"
     const val KTLINT = "11.3.2"
 
-    const val COMPOSE = "1.2.0"
+    const val COMPOSE = "1.3.1"
     const val ACTIVITY_COMPOSE = "1.5.1"
     const val MATERIAL3_COMPOSE = "1.0.1"
 
@@ -24,4 +24,6 @@ object Versions {
     const val OKHTTP = "4.10.0"
 
     const val GAUTH = "v1.0.7"
+
+    const val SERIALIZATION = "1.5.0"
 }
