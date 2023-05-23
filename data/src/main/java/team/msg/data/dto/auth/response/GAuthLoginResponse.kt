@@ -2,6 +2,7 @@ package team.msg.data.dto.auth.response
 
 import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
+import team.msg.domain.model.auth.response.GAuthLoginResponseData
 
 @Serializable
 data class GAuthLoginResponse(
@@ -10,3 +11,11 @@ data class GAuthLoginResponse(
     @SerializedName("accessExp") val accessExp: String,
     @SerializedName("refreshExp") val refreshExp: String
 )
+
+fun GAuthLoginResponse.toLoginResponseData() =
+    GAuthLoginResponseData(
+        accessToken = this.accessToken,
+        refreshToken = this.refreshToken,
+        accessExp = this.accessExp,
+        refreshExp = this.refreshExp
+    )
