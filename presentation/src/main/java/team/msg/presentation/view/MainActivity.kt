@@ -24,6 +24,7 @@ import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
+import team.msg.presentation.BuildConfig
 import team.msg.presentation.R
 import team.msg.presentation.viewmodel.LoginViewModel
 
@@ -82,8 +83,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     setContent {
                         GAuthSigninWebView(
-                            clientId = "",
-                            redirectUri = ""
+                            clientId = BuildConfig.CLIENT_ID,
+                            redirectUri = BuildConfig.REDIRECT_URI
                         ) {
                             loginViewModel.gAuthLogin(it)
                         }
