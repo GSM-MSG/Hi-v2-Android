@@ -8,8 +8,8 @@ import team.msg.domain.model.auth.response.GAuthLoginResponseData
 data class GAuthLoginResponse(
     @SerializedName("accessToken") val accessToken: String,
     @SerializedName("refreshToken") val refreshToken: String,
-    @SerializedName("accessExp") val accessExp: String,
-    @SerializedName("refreshExp") val refreshExp: String
+    @SerializedName("accessExpiredAt") val accessExp: String,
+    @SerializedName("refreshExpiredAt") val refreshExp: String
 )
 
 fun GAuthLoginResponse.toLoginResponseData() =
