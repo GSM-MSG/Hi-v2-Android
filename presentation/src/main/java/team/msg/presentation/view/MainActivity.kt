@@ -20,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,7 +29,7 @@ import team.msg.presentation.viewmodel.LoginViewModel
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val loginViewModel by viewModels<LoginViewModel> ( )
+    private val loginViewModel by viewModels<LoginViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,7 +80,14 @@ class MainActivity : ComponentActivity() {
                     colors = Types.Colors.COLORED,
                     horizontalPaddingValue = 76.dp
                 ) {
-
+                    setContent {
+                        GAuthSigninWebView(
+                            clientId = "",
+                            redirectUri = ""
+                        ) {
+                            loginViewModel.gAuthLogin(it)
+                        }
+                    }
                 }
                 Spacer(modifier.height(12.dp))
                 Text(
