@@ -41,4 +41,8 @@ class Dependency {
     object MSG {
         const val GAUTH = "com.github.GSM-MSG:GAuth-Signin-Android:${Versions.GAUTH}"
     }
+
+    object DataStore {
+        const val DATASTORE = "androidx.datastore:datastore-preferences:${Versions.DATASTORE}"
+    }
 }

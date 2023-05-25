@@ -45,4 +45,5 @@ dependencies {
     implementation(Dependency.Libraries.OKHTTP)
     implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Dependency.Libraries.SERIALIZATION)
+    implementation(Dependency.DataStore.DATASTORE)
 }
