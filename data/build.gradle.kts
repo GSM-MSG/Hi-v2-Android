@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id(ProjectProperties.Gradle.LIBRARY)
     id(ProjectProperties.Gradle.KOTLIN)
@@ -13,6 +16,12 @@ android {
         minSdk = ProjectProperties.Versions.MIN_SDK
         testInstrumentationRunner = ProjectProperties.Test.TEST_RUNNER
         consumerProguardFiles(ProjectProperties.Files.CONSUMER_PROGUARDFILES)
+
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            getApiKey("BASE_URL")
+        )
     }
 
     buildTypes {
@@ -46,4 +55,11 @@ dependencies {
     implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Dependency.Libraries.SERIALIZATION)
     implementation(Dependency.DataStore.DATASTORE)
+}
+
+fun getApiKey(propertyKey: String): String {
+    val propFile = rootProject.file("./local.properties")
+    val properties = Properties()
+    properties.load(FileInputStream(propFile))
+    return properties.getProperty(propertyKey)
 }
