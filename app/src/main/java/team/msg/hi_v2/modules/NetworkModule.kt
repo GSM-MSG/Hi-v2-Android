@@ -10,6 +10,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import team.msg.data.network.api.AuthApi
+import team.msg.data.util.AuthInterceptor
 import team.msg.hi_v2.BuildConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -27,13 +28,15 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideOkhttpClient(
-        httpLoggingInterceptor: HttpLoggingInterceptor
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        authInterceptor: AuthInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(authInterceptor)
             .build()
     }
 
