@@ -7,6 +7,7 @@ import javax.inject.Inject
 class GAuthLoginUseCase @Inject constructor(
     private val authRepository: AuthRepository
 ) {
-    suspend operator fun invoke(body: GAuthLoginRequestData) =
+    suspend operator fun invoke(body: GAuthLoginRequestData) = kotlin.runCatching {
         authRepository.gAuthLogin(body)
+    }
 }
