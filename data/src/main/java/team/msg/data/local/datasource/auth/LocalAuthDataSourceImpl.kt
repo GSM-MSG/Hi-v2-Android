@@ -13,42 +13,42 @@ class LocalAuthDataSourceImpl @Inject constructor(
 ): LocalAuthDataSource {
 
     override suspend fun getAccessToken(): Flow<String> = dataSource.data.map {
-        it[stringPreferencesKey("access_token")] ?: ""
+        it[stringPreferencesKey("accessToken")] ?: ""
     }
 
     override suspend fun setAccessToken(accessToken: String) {
         dataSource.edit {
-            it[stringPreferencesKey("access_token")] = accessToken
+            it[stringPreferencesKey("accessToken")] = accessToken
         }
     }
 
     override suspend fun getAccessExp(): Flow<String> = dataSource.data.map {
-        it[stringPreferencesKey("access_exp")] ?: ""
+        it[stringPreferencesKey("accessExpiredAt")] ?: ""
     }
 
     override suspend fun setAccessExp(accessExp: String) {
         dataSource.edit {
-            it[stringPreferencesKey("access_exp")] = accessExp
+            it[stringPreferencesKey("accessExpiredAt")] = accessExp
         }
     }
 
     override suspend fun getRefreshToken(): Flow<String> = dataSource.data.map {
-        it[stringPreferencesKey("refresh_token")] ?: ""
+        it[stringPreferencesKey("refreshToken")] ?: ""
     }
 
     override suspend fun setRefreshToken(refreshToken: String) {
         dataSource.edit {
-            it[stringPreferencesKey("refresh_token")] = refreshToken
+            it[stringPreferencesKey("refreshToken")] = refreshToken
         }
     }
 
     override suspend fun getRefreshExp(): Flow<String> = dataSource.data.map {
-        it[stringPreferencesKey("refresh_exp")] ?: ""
+        it[stringPreferencesKey("refreshExpiredAt")] ?: ""
     }
 
     override suspend fun setRefreshExp(refreshExp: String) {
         dataSource.edit {
-            it[stringPreferencesKey("refresh_exp")] = refreshExp
+            it[stringPreferencesKey("refreshExpiredAt")] = refreshExp
         }
     }
 
