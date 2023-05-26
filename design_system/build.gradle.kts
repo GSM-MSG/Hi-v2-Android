@@ -34,6 +34,9 @@ android {
     buildFeatures {
         compose = true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = ProjectProperties.Versions.COMPOSE_COMPILER
+    }
 }
 
 dependencies {
