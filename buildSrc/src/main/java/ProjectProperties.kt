@@ -8,6 +8,7 @@ object ProjectProperties {
         const val KTLINT = "org.jlleitschuh.gradle.ktlint"
         const val KAPT = "kapt"
         const val HILT = "com.google.dagger.hilt.android"
+        const val SERIALIZATION = "plugin.serialization"
     }
     object Test {
         const val TEST_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
@@ -31,7 +32,7 @@ object ProjectProperties {
         const val VERSION_CODE = 1
         const val VERSION_NAME = "1.0"
         val JAVA_VERSION = JavaVersion.VERSION_11
-        const val COMPOSE_COMPILER = "1.4.2"
+        const val COMPOSE_COMPILER= "1.4.2"
     }
 
     object NameSpace {
