@@ -16,4 +16,11 @@ interface LocalAuthDataSource {
     suspend fun getRefreshExp(): Flow<String>
     suspend fun setRefreshExp(refreshExp: String)
 
+    suspend fun saveTokenInfo(
+        accessToken: String,
+        refreshToken: String,
+        accessExp: String,
+        refreshExp: String,
+    )
+
 }

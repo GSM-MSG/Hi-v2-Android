@@ -52,4 +52,18 @@ class LocalAuthDataSourceImpl @Inject constructor(
         }
     }
 
+    override suspend fun saveTokenInfo(
+        accessToken: String,
+        refreshToken: String,
+        accessExp: String,
+        refreshExp: String,
+    ) {
+        dataSource.run {
+            setAccessToken(accessToken)
+            setRefreshToken(refreshToken)
+            setAccessExp(accessExp)
+            setRefreshExp(refreshExp)
+        }
+    }
+
 }
