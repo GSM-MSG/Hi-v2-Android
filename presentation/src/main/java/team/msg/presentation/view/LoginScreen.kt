@@ -35,7 +35,6 @@ fun LoginScreen(
 ) {
     var isClicked by remember { mutableStateOf(false) }
 
-
     Column(
         modifier = modifier
             .fillMaxWidth()
