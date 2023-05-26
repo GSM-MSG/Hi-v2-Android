@@ -31,6 +31,7 @@ object ProjectProperties {
         const val VERSION_CODE = 1
         const val VERSION_NAME = "1.0"
         val JAVA_VERSION = JavaVersion.VERSION_11
+        const val COMPOSE_COMPILER = "1.4.2"
     }
 
     object NameSpace {
