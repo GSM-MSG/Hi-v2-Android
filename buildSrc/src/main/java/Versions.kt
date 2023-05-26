@@ -26,4 +26,8 @@ object Versions {
     const val GAUTH = "v1.0.7"
 
     const val SERIALIZATION = "1.5.0"
+
+    const val DATASTORE = "1.0.0"
+
+    const val HILT_COMPOSE = "1.0.0"
 }

@@ -73,6 +73,7 @@ dependencies {
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
     implementation(Dependency.MSG.GAUTH)
+    implementation(Dependency.Compose.COMPOSE_HILT)
 }
 
 fun getApiKey(propertyKey: String): String {

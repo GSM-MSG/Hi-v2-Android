@@ -12,6 +12,7 @@ class Dependency {
         const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
         const val COMPOSE_MATERIAL3 = "androidx.compose.material3:material3:${Versions.MATERIAL3_COMPOSE}"
         const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
+        const val COMPOSE_HILT = "androidx.hilt:hilt-navigation-compose:${Versions.HILT_COMPOSE}"
     }
 
     object Test {
@@ -40,5 +41,9 @@ class Dependency {
 
     object MSG {
         const val GAUTH = "com.github.GSM-MSG:GAuth-Signin-Android:${Versions.GAUTH}"
+    }
+
+    object DataStore {
+        const val DATASTORE = "androidx.datastore:datastore-preferences:${Versions.DATASTORE}"
     }
 }
