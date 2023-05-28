@@ -48,6 +48,7 @@ dependencies {
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
     implementation(Dependency.Compose.COMPOSE)
+    implementation(Dependency.Compose.COMPOSE_MATERIAL3)
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
 }
