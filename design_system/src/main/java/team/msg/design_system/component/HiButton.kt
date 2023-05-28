@@ -28,7 +28,7 @@ fun HiButton(
             .padding(horizontal = 20.dp),
         colors = ButtonDefaults.buttonColors(containerColor = HiColor.P1),
         shape = RoundedCornerShape(8.dp),
-        onClick = { onClick() }
+        onClick = onClick
     ) {
         Text(
             text = text,
