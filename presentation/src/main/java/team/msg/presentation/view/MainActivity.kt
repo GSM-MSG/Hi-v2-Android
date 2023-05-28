@@ -30,8 +30,6 @@ import team.msg.presentation.viewmodel.LoginViewModel
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val loginViewModel by viewModels<LoginViewModel>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
