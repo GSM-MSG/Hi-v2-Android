@@ -38,8 +38,6 @@ class MainActivity : ComponentActivity() {
             LoginScreen()
         }
     }
-
-
 }
 
 
