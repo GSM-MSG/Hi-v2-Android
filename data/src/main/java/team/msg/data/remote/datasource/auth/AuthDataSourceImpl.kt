@@ -1,6 +1,7 @@
 package team.msg.data.remote.datasource.auth
 
 import team.msg.data.dto.auth.request.GAuthLoginRequest
+import team.msg.data.dto.auth.response.GAuthAuthLinkResponse
 import team.msg.data.dto.auth.response.GAuthLoginResponse
 import team.msg.data.network.api.AuthApi
 import team.msg.data.util.HiApiHandler
@@ -14,4 +15,13 @@ class AuthDataSourceImpl @Inject constructor(
             .httpRequest { authApi.gAuthLogin(body = body) }
             .sendRequest()
 
+    override suspend fun gAuthAuthLink(): GAuthAuthLinkResponse =
+        HiApiHandler<GAuthAuthLinkResponse>()
+            .httpRequest { authApi.gAuthAuthLink() }
+            .sendRequest()
+
+    override suspend fun logout() =
+        HiApiHandler<Unit>()
+            .httpRequest { authApi.logout() }
+            .sendRequest()
 }
