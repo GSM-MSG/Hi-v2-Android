@@ -26,12 +26,12 @@ import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import team.msg.presentation.BuildConfig
 import team.msg.presentation.R
-import team.msg.presentation.viewmodel.LoginViewModel
+import team.msg.presentation.viewmodel.AuthViewModel
 
 @Composable
 fun LoginScreen(
     modifier: Modifier = Modifier,
-    loginViewModel: LoginViewModel = hiltViewModel()
+    authViewModel: AuthViewModel = hiltViewModel()
 ) {
     var isClicked by remember { mutableStateOf(false) }
 
@@ -92,7 +92,7 @@ fun LoginScreen(
             clientId = BuildConfig.CLIENT_ID,
             redirectUri = BuildConfig.REDIRECT_URI
         ) {
-            loginViewModel.gAuthLogin(it)
+            authViewModel.gAuthLogin(it)
         }
     }
 }
