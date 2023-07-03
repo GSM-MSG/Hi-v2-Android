@@ -1,10 +1,12 @@
 package team.msg.data.repository
 
 import team.msg.data.dto.auth.request.GAuthLoginRequest
+import team.msg.data.dto.auth.response.asGAuthAuthLinkResponseData
 import team.msg.data.dto.auth.response.toLoginResponseData
 import team.msg.data.local.datasource.auth.LocalAuthDataSource
 import team.msg.data.remote.datasource.auth.AuthDataSource
 import team.msg.domain.model.auth.request.GAuthLoginRequestData
+import team.msg.domain.model.auth.response.GAuthAuthLinkResponseData
 import team.msg.domain.model.auth.response.GAuthLoginResponseData
 import team.msg.domain.repository.AuthRepository
 import javax.inject.Inject
@@ -24,4 +26,8 @@ class AuthRepositoryImpl @Inject constructor(
     ) {
         localAuthDataSource.saveTokenInfo(accessToken, refreshToken, accessExp, refreshExp)
     }
+
+    override suspend fun gAuthAuthLink(): GAuthAuthLinkResponseData = authDataSource.gAuthAuthLink().asGAuthAuthLinkResponseData()
+
+    override suspend fun logout() = authDataSource.logout()
 }
