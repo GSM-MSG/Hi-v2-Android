@@ -1,8 +1,8 @@
-package team.msg.data.dto.user.response
+package team.msg.data.dto.user.response.getAllStudentList
 
 import java.util.UUID
 
-data class StudentResponse(
+data class GetAllStudentListResponse(
     val id: UUID,
     val email: String,
     val name: String,
