@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import team.msg.domain.model.auth.request.GAuthLoginRequestData
-import team.msg.domain.usecase.GAuthLoginUseCase
-import team.msg.domain.usecase.LogoutUseCase
-import team.msg.domain.usecase.SaveTokenInfoUseCase
+import team.msg.domain.usecase.auth.GAuthLoginUseCase
+import team.msg.domain.usecase.auth.LogoutUseCase
+import team.msg.domain.usecase.auth.SaveTokenInfoUseCase
 import javax.inject.Inject
 
 @HiltViewModel
