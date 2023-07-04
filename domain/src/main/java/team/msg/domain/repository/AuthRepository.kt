@@ -1,7 +1,6 @@
 package team.msg.domain.repository
 
 import team.msg.domain.model.auth.request.GAuthLoginRequestData
-import team.msg.domain.model.auth.response.GAuthAuthLinkResponseData
 import team.msg.domain.model.auth.response.GAuthLoginResponseData
 
 interface AuthRepository {
@@ -13,8 +12,6 @@ interface AuthRepository {
         accessExp: String,
         refreshExp: String,
     )
-
-    suspend fun gAuthAuthLink(): GAuthAuthLinkResponseData
 
     suspend fun logout()
 }
