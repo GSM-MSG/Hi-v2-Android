@@ -6,6 +6,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import team.msg.data.remote.datasource.auth.AuthDataSource
 import team.msg.data.remote.datasource.auth.AuthDataSourceImpl
+import team.msg.data.remote.datasource.user.UserDataSource
+import team.msg.data.remote.datasource.user.UserDataSourceImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -14,4 +16,9 @@ abstract class DataSourceModule {
     abstract fun bindsAuthDataSource(
         authDataSourceImpl: AuthDataSourceImpl
     ): AuthDataSource
+
+    @Binds
+    abstract fun bindsUserDataSource(
+        userDataSourceImpl: UserDataSourceImpl
+    ): UserDataSource
 }
