@@ -1,4 +1,4 @@
-package team.msg.domain.usecase
+package team.msg.domain.usecase.auth
 
 import team.msg.domain.model.auth.request.GAuthLoginRequestData
 import team.msg.domain.repository.AuthRepository
