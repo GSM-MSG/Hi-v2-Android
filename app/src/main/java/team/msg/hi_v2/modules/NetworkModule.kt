@@ -10,6 +10,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import team.msg.data.network.api.AuthApi
+import team.msg.data.network.api.HomebaseApi
 import team.msg.data.network.api.UserApi
 import team.msg.data.util.AuthInterceptor
 import team.msg.hi_v2.BuildConfig
@@ -70,5 +71,11 @@ object NetworkModule {
     @Singleton
     fun provideUserService(retrofit: Retrofit): UserApi {
         return retrofit.create(UserApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideHomebaseService(retrofit: Retrofit): HomebaseApi {
+        return retrofit.create(HomebaseApi::class.java)
     }
 }
