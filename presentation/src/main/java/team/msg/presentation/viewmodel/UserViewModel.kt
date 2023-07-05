@@ -3,6 +3,7 @@ package team.msg.presentation.viewmodel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import team.msg.domain.model.user.request.GetUserInfo.GetUserInfoRequestModel
 import team.msg.domain.model.user.request.modifyStudentStatus.ModifyStudentStatusRequestModel
@@ -13,6 +14,7 @@ import team.msg.domain.usecase.user.ModifyStudentStatusUseCase
 import java.util.UUID
 import javax.inject.Inject
 
+@HiltViewModel
 class UserViewModel @Inject constructor(
     private val getAllStudentListUseCase: GetAllStudentListUseCase,
     private val getMyPageInfoUseCase: GetMyPageInfoUseCase,
