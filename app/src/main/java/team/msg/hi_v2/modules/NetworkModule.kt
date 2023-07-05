@@ -57,25 +57,18 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideConverterFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create()
-    }
+    fun provideConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
 
     @Provides
     @Singleton
-    fun provideAuthService(retrofit: Retrofit): AuthApi {
-        return retrofit.create(AuthApi::class.java)
-    }
+    fun provideAuthService(retrofit: Retrofit): AuthApi = retrofit.create(AuthApi::class.java)
 
     @Provides
     @Singleton
-    fun provideUserService(retrofit: Retrofit): UserApi {
-        return retrofit.create(UserApi::class.java)
-    }
+    fun provideUserService(retrofit: Retrofit): UserApi = retrofit.create(UserApi::class.java)
 
     @Provides
     @Singleton
-    fun provideHomebaseService(retrofit: Retrofit): HomebaseApi {
-        return retrofit.create(HomebaseApi::class.java)
-    }
+    fun provideHomebaseService(retrofit: Retrofit): HomebaseApi = retrofit.create(HomebaseApi::class.java)
+
 }
