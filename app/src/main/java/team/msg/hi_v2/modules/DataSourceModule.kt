@@ -6,6 +6,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import team.msg.data.remote.datasource.auth.AuthDataSource
 import team.msg.data.remote.datasource.auth.AuthDataSourceImpl
+import team.msg.data.remote.datasource.homebase.HomebaseDataSource
+import team.msg.data.remote.datasource.homebase.HomebaseDataSourceImpl
 import team.msg.data.remote.datasource.user.UserDataSource
 import team.msg.data.remote.datasource.user.UserDataSourceImpl
 
@@ -21,4 +23,9 @@ abstract class DataSourceModule {
     abstract fun bindsUserDataSource(
         userDataSourceImpl: UserDataSourceImpl
     ): UserDataSource
+
+    @Binds
+    abstract fun bindsHomebaseDataSource(
+        homebaseDataSourceImpl: HomebaseDataSourceImpl
+    ): HomebaseDataSource
 }
