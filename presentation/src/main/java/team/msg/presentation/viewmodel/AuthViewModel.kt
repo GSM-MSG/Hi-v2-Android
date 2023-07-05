@@ -18,9 +18,8 @@ class AuthViewModel @Inject constructor(
     private val logoutUseCase: LogoutUseCase
 ): ViewModel() {
     fun gAuthLogin(code: String) = viewModelScope.launch {
-        gAuthLoginUseCase(
-            GAuthLoginRequestData(code)
-        ).onSuccess {
+        gAuthLoginUseCase(GAuthLoginRequestData(code))
+            .onSuccess {
             saveTokenInfoUseCase(
                 accessToken = it.accessToken,
                 refreshToken = it.refreshToken,
