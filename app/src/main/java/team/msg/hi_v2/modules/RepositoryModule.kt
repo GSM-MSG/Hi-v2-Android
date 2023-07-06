@@ -5,8 +5,10 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import team.msg.data.repository.AuthRepositoryImpl
+import team.msg.data.repository.HomebaseRepositoryImpl
 import team.msg.data.repository.UserRepositoryImpl
 import team.msg.domain.repository.AuthRepository
+import team.msg.domain.repository.HomebaseRepository
 import team.msg.domain.repository.UserRepository
 
 @Module
@@ -21,4 +23,9 @@ abstract class RepositoryModule {
     abstract fun bindsUserRepository(
         userRepositoryImpl: UserRepositoryImpl
     ): UserRepository
+
+    @Binds
+    abstract fun bindsHomebaseRepository(
+        homebaseRepositoryImpl: HomebaseRepositoryImpl
+    ): HomebaseRepository
 }
