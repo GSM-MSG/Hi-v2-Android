@@ -17,7 +17,7 @@ class HomebaseViewModel @Inject constructor(
     private val getAllHomebaseReservationUseCase: GetAllHomebaseReservationUseCase,
     private val postHomebaseReservationUseCase: PostHomebaseReservationUseCase,
     private val deletePeriodReservationUseCase: DeletePeriodReservationUseCase
-) : ViewModel() {
+): ViewModel() {
     fun getAllHomebaseReservation(
         period: Int,
         floor: Int
