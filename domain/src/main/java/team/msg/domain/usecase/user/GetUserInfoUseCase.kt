@@ -7,5 +7,7 @@ import javax.inject.Inject
 class GetUserInfoUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    suspend operator fun invoke(getUserInfoRequestModel: GetUserInfoRequestModel) = kotlin.runCatching { userRepository.getUserInfo(getUserInfoRequestModel) }
+    suspend operator fun invoke(getUserInfoRequestModel: GetUserInfoRequestModel) = kotlin.runCatching {
+        userRepository.getUserInfo(getUserInfoRequestModel)
+    }
 }

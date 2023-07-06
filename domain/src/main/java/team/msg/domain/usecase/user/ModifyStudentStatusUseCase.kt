@@ -8,5 +8,7 @@ import javax.inject.Inject
 class ModifyStudentStatusUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    suspend operator fun invoke(id: UUID, modifyStudentStatusRequestModel: ModifyStudentStatusRequestModel) = kotlin.runCatching { userRepository.modifyStudentStatus(id, modifyStudentStatusRequestModel) }
+    suspend operator fun invoke(id: UUID, modifyStudentStatusRequestModel: ModifyStudentStatusRequestModel) = kotlin.runCatching {
+        userRepository.modifyStudentStatus(id, modifyStudentStatusRequestModel)
+    }
 }
