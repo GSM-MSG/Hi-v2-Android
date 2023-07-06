@@ -6,5 +6,7 @@ import javax.inject.Inject
 class GetAllStudentListUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    suspend operator fun invoke() = kotlin.runCatching { userRepository.getAllStudentList() }
+    suspend operator fun invoke() = kotlin.runCatching {
+        userRepository.getAllStudentList()
+    }
 }
