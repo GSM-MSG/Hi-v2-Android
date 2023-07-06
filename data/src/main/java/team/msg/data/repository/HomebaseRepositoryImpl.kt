@@ -14,13 +14,19 @@ class HomebaseRepositoryImpl @Inject constructor(
     override suspend fun getAllHomebaseReservation(
         period: Int,
         floor: Int
-    ): GetAllHomebaseReservationResponseModel = homebaseDataSource.getAllHomebaseReservation(period, floor).asGetAllHomebaseReservationResponseModel()
+    ): GetAllHomebaseReservationResponseModel {
+        return homebaseDataSource.getAllHomebaseReservation(period, floor).asGetAllHomebaseReservationResponseModel()
+    }
 
     override suspend fun postHomebaseReservation(
         period: Int,
         floor: Int,
         body: postHomebaseReservationRequestModel
-    ) = homebaseDataSource.postHomebaseReservation(period, floor, body.aspostHomebaseReservationRequest())
+    ) {
+        homebaseDataSource.postHomebaseReservation(period, floor, body.aspostHomebaseReservationRequest())
+    }
 
-    override suspend fun deletePeriodReservation(period: Int) = homebaseDataSource.deletePeriodReservation(period)
+    override suspend fun deletePeriodReservation(period: Int) {
+        homebaseDataSource.deletePeriodReservation(period)
+    }
 }

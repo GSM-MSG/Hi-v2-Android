@@ -7,7 +7,11 @@ import javax.inject.Inject
 class PostHomebaseReservationUseCase @Inject constructor(
     private val homebaseRepository: HomebaseRepository
 ) {
-    suspend operator fun invoke(period: Int, floor: Int, body: postHomebaseReservationRequestModel) = kotlin.runCatching {
+    suspend operator fun invoke(
+        period: Int,
+        floor: Int,
+        body: postHomebaseReservationRequestModel
+    ) = kotlin.runCatching {
         homebaseRepository.postHomebaseReservation(period, floor, body)
     }
 }
