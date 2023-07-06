@@ -49,7 +49,7 @@ class HomebaseViewModel @Inject constructor(
         }
     }
 
-    fun deletePeriodReservation(period: Int,) {
+    fun deletePeriodReservation(period: Int) {
         viewModelScope.launch {
             deletePeriodReservationUseCase(period)
                 .onSuccess {
