@@ -12,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import team.msg.data.network.api.AuthApi
 import team.msg.data.network.api.HomebaseApi
+import team.msg.data.network.api.NoticeApi
 import team.msg.data.network.api.ReservationApi
 import team.msg.data.network.api.UserApi
 import team.msg.data.util.AuthInterceptor
@@ -76,4 +77,8 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideReservationService(retrofit: Retrofit): ReservationApi = retrofit.create(ReservationApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideNoticeService(retrofit: Retrofit): NoticeApi = retrofit.create(NoticeApi::class.java)
 }
