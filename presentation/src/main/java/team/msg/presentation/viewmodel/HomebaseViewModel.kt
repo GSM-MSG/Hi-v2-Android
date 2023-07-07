@@ -17,47 +17,41 @@ class HomebaseViewModel @Inject constructor(
     private val getAllHomebaseReservationUseCase: GetAllHomebaseReservationUseCase,
     private val postHomebaseReservationUseCase: PostHomebaseReservationUseCase,
     private val deletePeriodReservationUseCase: DeletePeriodReservationUseCase
-): ViewModel() {
+) : ViewModel() {
     fun getAllHomebaseReservation(
         period: Int,
         floor: Int
-    ) {
-        viewModelScope.launch {
-            getAllHomebaseReservationUseCase(period, floor)
-                .onSuccess {
-                    Log.d("Success", "getAllHomebaseReservation: $it")
-                }
-                .onFailure {
-                    Log.d("Failure", "getAllHomebaseReservation: ${it.message}")
-                }
-        }
+    ) = viewModelScope.launch {
+        getAllHomebaseReservationUseCase(period, floor)
+            .onSuccess {
+                Log.d("Success", "getAllHomebaseReservation: $it")
+            }
+            .onFailure {
+                Log.d("Failure", "getAllHomebaseReservation: ${it.message}")
+            }
     }
 
     fun postHomebaseReservation(
         period: Int,
         floor: Int,
         body: postHomebaseReservationRequestModel
-    ) {
-        viewModelScope.launch {
-            postHomebaseReservationUseCase(period, floor, body)
-                .onSuccess {
-                    Log.d("Success", "postHomebaseReservation: $it")
-                }
-                .onFailure {
-                    Log.d("Failure", "postHomebaseReservation: ${it.message}")
-                }
-        }
+    ) = viewModelScope.launch {
+        postHomebaseReservationUseCase(period, floor, body)
+            .onSuccess {
+                Log.d("Success", "postHomebaseReservation: $it")
+            }
+            .onFailure {
+                Log.d("Failure", "postHomebaseReservation: ${it.message}")
+            }
     }
 
-    fun deletePeriodReservation(period: Int) {
-        viewModelScope.launch {
-            deletePeriodReservationUseCase(period)
-                .onSuccess {
-                    Log.d("Success", "deletePeriodReservation: $it")
-                }
-                .onFailure {
-                    Log.d("Failure", "deletePeriodReservation: ${it.message}")
-                }
-        }
+    fun deletePeriodReservation(period: Int) = viewModelScope.launch {
+        deletePeriodReservationUseCase(period)
+            .onSuccess {
+                Log.d("Success", "deletePeriodReservation: $it")
+            }
+            .onFailure {
+                Log.d("Failure", "deletePeriodReservation: ${it.message}")
+            }
     }
 }
