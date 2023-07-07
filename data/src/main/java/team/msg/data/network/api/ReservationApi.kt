@@ -29,7 +29,7 @@ interface ReservationApi {
 
     @PATCH("reservation/{id}/{user_id}")
     suspend fun patchRepresentative(
-        @Path("userId") userId: UUID
+        @Path("user_id") userId: UUID
     )
 
     @DELETE("reservation/{id}/exit")
