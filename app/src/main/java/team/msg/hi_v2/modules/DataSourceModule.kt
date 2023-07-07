@@ -4,6 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import team.msg.data.remote.datasource.Reservation.ReservationDataSource
+import team.msg.data.remote.datasource.Reservation.ReservationDataSourceImpl
 import team.msg.data.remote.datasource.auth.AuthDataSource
 import team.msg.data.remote.datasource.auth.AuthDataSourceImpl
 import team.msg.data.remote.datasource.homebase.HomebaseDataSource
@@ -28,4 +30,9 @@ abstract class DataSourceModule {
     abstract fun bindsHomebaseDataSource(
         homebaseDataSourceImpl: HomebaseDataSourceImpl
     ): HomebaseDataSource
+
+    @Binds
+    abstract fun bindsReservationDataSource(
+        reservationDataSourceImpl: ReservationDataSourceImpl
+    ): ReservationDataSource
 }
