@@ -10,6 +10,8 @@ import team.msg.data.remote.datasource.auth.AuthDataSource
 import team.msg.data.remote.datasource.auth.AuthDataSourceImpl
 import team.msg.data.remote.datasource.homebase.HomebaseDataSource
 import team.msg.data.remote.datasource.homebase.HomebaseDataSourceImpl
+import team.msg.data.remote.datasource.notice.NoticeDataSource
+import team.msg.data.remote.datasource.notice.NoticeDataSourceImpl
 import team.msg.data.remote.datasource.user.UserDataSource
 import team.msg.data.remote.datasource.user.UserDataSourceImpl
 
@@ -35,4 +37,9 @@ abstract class DataSourceModule {
     abstract fun bindsReservationDataSource(
         reservationDataSourceImpl: ReservationDataSourceImpl
     ): ReservationDataSource
+
+    @Binds
+    abstract fun bindsNoticeDataSource(
+        noticeDataSourceImpl: NoticeDataSourceImpl
+    ): NoticeDataSource
 }
